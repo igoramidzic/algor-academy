@@ -1,0 +1,21 @@
+@import '../../app.component.scss';
+
+.main-navbar-container {
+  font-family: $primary_font;
+  background-color: $dark_background_color;
+
+  .content-wrapper {
+    padding: 0 15px;
+  }
+
+  .left-container {
+    .logo-link {
+      margin: 0;
+      height: 60px;
+
+      .logo-img {
+        width: 175px;
+      }
+    }
+  }
+}
