@@ -1,0 +1,27 @@
+{
+  "name": "algor-academy",
+  "version": "1.0.0",
+  "description": "A teaching tool for algorithms and data structures",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igoramidzic/algor-academy.git"
+  },
+  "keywords": [
+    "algorithms",
+    "data-structures",
+    "learn"
+  ],
+  "author": "Igor Amidzic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/igoramidzic/algor-academy/issues"
+  },
+  "homepage": "https://github.com/igoramidzic/algor-academy#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
