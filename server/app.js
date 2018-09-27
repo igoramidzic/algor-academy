@@ -1,11 +1,15 @@
-const express = require('express');
+var express = require("express");
+var bodyParser = require("body-parser");
+var routes = require("./routes/routes.js");
+var app = express();
 
-let app = express();
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 
-app.get('', (req, res) => {
-    res.send("Hello world!");
-})
+routes(app);
 
-app.listen(3000, () => {
-    console.log("Listening to port 3000");
-})
+var server = app.listen(3000, () => {
+    console.log("app running on port ", server.address().port);
+});
