@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'app/app.component.scss';
+
+* {
+  box-sizing: border-box !important;
+}
+
+body,
+html {
+  margin: 0;
+  background-color: $primary_background_color;
+}
