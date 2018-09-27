@@ -4,6 +4,7 @@
   "description": "A teaching tool for algorithms and data structures",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "jest"
   },
   "repository": {
