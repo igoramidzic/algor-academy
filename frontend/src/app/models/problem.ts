@@ -1,29 +1,12 @@
 export interface Problem {
-  _id: {
-    type: String;
-  };
-  title: {
-    type: String;
-  };
-  description: {
-    type: String;
-  };
-  date_published: {
-    type: Date;
-  };
-  word_solution: {
-    type: String;
-  };
-  pseudo_code_solution: {
-    type: String;
-  };
-  code_solution: {
-    type: String;
-  };
-  difficulty: {
-    type: Number;
-  };
-  success_rate: {
-    type: Number;
-  };
+  _id: String;
+  title: String;
+  description: String;
+  date_published: Date;
+  word_solution: String;
+  pseudo_code_solution: String;
+  code_solution: String;
+  difficulty: Number;
+  success_rate: Number;
+  link: String;
 }

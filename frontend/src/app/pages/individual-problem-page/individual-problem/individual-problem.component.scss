@@ -1,0 +1,15 @@
+@import '../../../app.component.scss';
+
+.individual-problem-wrapper {
+  .individual-problem-container {
+    background-color: #ffffff;
+    padding: 30px;
+    font-family: $primary_font;
+
+    .problem-content {
+      .description {
+        margin: 0;
+      }
+    }
+  }
+}
