@@ -36,6 +36,11 @@ const problemModel = new Schema({
     type: Number,
     required: true,
     description: "Must be a number and is required"
+  },
+  link: {
+    type: String,
+    required: true,
+    description: "Must be a string and is required"
   }
 })
 

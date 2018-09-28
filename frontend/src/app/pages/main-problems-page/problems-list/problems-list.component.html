@@ -1,14 +1,22 @@
-<div class="problems-list-wrapper max-page-width">
+<div class="problems-list-wrapper">
   <div class="problems-list-container fat-box-shadow">
     <ul class="problems-list">
       <li class="problems-item" *ngFor="let problem of problems">
         <a [routerLink]="['', 'problems', problem._id]" class="link-wrapper">
-          <div class="problems-item-container">
-            <h3 class="title">{{ problem.title }}</h3>
-            <p class="difficulty easy" *ngIf="problem.difficulty === 1">Easy</p>
-            <p class="difficulty medium" *ngIf="problem.difficulty == 2">Medium</p>
-            <p class="difficulty hard" *ngIf="problem.difficulty == 3">Hard</p>
-            <p class="description">{{ problem.description }}</p>
+          <div class="problem-content center-container">
+            <div class="center-space-between-content">
+              <div class="problems-item-container">
+                <h3 class="title">{{ problem.title }}</h3>
+                <p class="difficulty easy" *ngIf="problem.difficulty === 1">Easy</p>
+                <p class="difficulty medium" *ngIf="problem.difficulty == 2">Medium</p>
+                <p class="difficulty hard" *ngIf="problem.difficulty == 3">Hard</p>
+                <p class="description">{{ problem.description }}</p>
+              </div>
+
+              <div class="solution-link-container">
+                <a [routerLink]="['', 'problems', problem._id]" class="solution-link">View solution</a>
+              </div>
+            </div>
           </div>
         </a>
       </li>

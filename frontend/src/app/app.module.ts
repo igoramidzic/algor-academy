@@ -8,6 +8,8 @@ import { MainNavbarComponent } from "./components/main-navbar/main-navbar.compon
 import { MainProblemsPageComponent } from "./pages/main-problems-page/main-problems-page.component";
 import { PageHeaderNavComponent } from "./components/page-header-nav/page-header-nav.component";
 import { ProblemsListComponent } from './pages/main-problems-page/problems-list/problems-list.component';
+import { IndividualProblemPageComponent } from './pages/individual-problem-page/individual-problem-page.component';
+import { IndividualProblemComponent } from './pages/individual-problem-page/individual-problem/individual-problem.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { ProblemsListComponent } from './pages/main-problems-page/problems-list/
     MainNavbarComponent,
     MainProblemsPageComponent,
     PageHeaderNavComponent,
-    ProblemsListComponent
+    ProblemsListComponent,
+    IndividualProblemPageComponent,
+    IndividualProblemComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
