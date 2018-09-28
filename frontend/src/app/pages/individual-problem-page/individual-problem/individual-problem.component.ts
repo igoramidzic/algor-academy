@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from "@angular/core";
 import { Problem } from "../../../models/problem";
-import * as showdown from "showdown";
 
 @Component({
   selector: "app-individual-problem",
@@ -10,7 +9,6 @@ import * as showdown from "showdown";
 export class IndividualProblemComponent implements OnInit {
   @Input("problem")
   problem: Problem;
-  text: String;
 
   constructor() {}
 

@@ -1,0 +1,15 @@
+<app-page-header-nav [headerTitle]="problem?.title"></app-page-header-nav>
+<div class="edit-problem-wrapper max-page-width">
+  <div class="wrapper">
+    <div class="markdown-editor-container fat-box-shadow">
+      <textarea [(ngModel)]="text" (ngModelChange)="updateMarkdownPreview()" name="" id="" cols="30" rows="10" placeholder="..." class="markdown-textfield"></textarea>
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <div id="markdown-preview" class="markdown-preview-container fat-box-shadow">
+      Preview ...
+    </div>
+  </div>
+
+</div>
