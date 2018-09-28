@@ -1,10 +1,10 @@
 <div class="main-navbar-container">
-  <div class="content-wrapper center-container">
+  <div class="content-wrapper center-container max-page-width">
     <div class="center-space-between-content">
       <div class="left-container">
         <div class="center-container">
           <div class="vertical-center-space-between-content">
-            <a href="" class="logo-link">
+            <a [routerLink]="['']" class="logo-link">
               <img class="logo-img" src="assets/img/logo.png" alt="Algor Academy">
             </a>
           </div>
@@ -12,7 +12,11 @@
       </div>
 
       <div class="right-container">
-        <!-- -->
+        <ul class="link-list">
+          <li class="link-item">
+            <a [routerLinkActive]="['active']" [routerLink]="['problems']" class="link">Problems</a>
+          </li>
+        </ul>
       </div>
     </div>
   </div>

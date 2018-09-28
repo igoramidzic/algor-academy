@@ -36,11 +36,6 @@ const problemModel = new Schema({
     type: Number,
     required: true,
     description: "Must be a number and is required"
-  },
-  success_rate: {
-    type: Number,
-    required: false,
-    description: "Must be a number"
   }
 })
 
