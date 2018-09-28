@@ -1,0 +1,38 @@
+@import '../../app.component.scss';
+
+.main-header-wrapper {
+  background-color: #ffffff;
+
+  .main-header-container {
+    max-width: 1240px;
+    margin: auto;
+    padding: 0 20px;
+    font-family: $primary_font;
+
+    .header-content {
+      padding: 20px 0;
+
+      .header-title {
+        margin: 0;
+        font-weight: 600;
+        transition: .25s;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 901px) {
+  .header-content {
+    .header-title {
+      font-size: 26px;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .header-content {
+    .header-title {
+      font-size: 22px;
+    }
+  }
+}

@@ -1,5 +1,7 @@
 @import '../../app.component.scss';
 
+$nav_notactive: #b7c9cc;
+
 .main-navbar-container {
   font-family: $primary_font;
   background-color: $dark_background_color;
@@ -14,7 +16,44 @@
       height: 60px;
 
       .logo-img {
-        width: 175px;
+        height: 60px;
+      }
+    }
+  }
+
+  .right-container {
+    height: 60px;
+
+    .link-list {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      height: 60px;
+
+      .link-item {
+        display: inline-block;
+        margin-right: 30px;
+
+        &:last-child {
+          margin: 0;
+        }
+
+        .link {
+          color: $nav_notactive;
+          display: inline-block;
+          font-size: 14px;
+          font-weight: 700;
+          height: 60px;
+          line-height: 60px;
+          text-transform: uppercase;
+          text-decoration: none;
+        }
+
+        .active {
+          border-bottom: 5px solid $primary_color;
+          color: #ffffff;
+        }
+
       }
     }
   }

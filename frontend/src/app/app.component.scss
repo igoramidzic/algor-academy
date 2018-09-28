@@ -3,11 +3,12 @@
 $primary_color: #1ba94c;
 $dark_background_color: #39424e;
 $primary_background_color: #f3f7f7;
-$text_color_light: #b3b3b3;
-$text_color_dark: #3c3c3c;
+$text_color_light: #576871;
+$text_color_dark: #0e141e;
 $success_color: #25C646;
 $danger_color: #ea0027;
 $pending_color: #EFE934;
+$border_color: #e7eeef;
 
 $primary_font: 'Nunito Sans',
 sans-serif;
@@ -62,6 +63,23 @@ sans-serif;
 
 button {
   outline: none;
+}
+
+.slim-box-shadow {
+  box-shadow: 0.1px 1px 4px 0 #e7eeef;
+}
+
+.fat-box-shadow {
+  box-shadow: rgba(115, 143, 147, 0.4) 0px 6px 16px 0px;
+}
+
+.dark-text {
+  color: $text_color_dark;
+}
+
+.max-page-width {
+  max-width: 1240px;
+  margin: auto;
 }
 
 @media only screen and (min-width: 768px) {

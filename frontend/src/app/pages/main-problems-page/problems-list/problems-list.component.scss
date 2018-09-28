@@ -1,0 +1,80 @@
+@import '../../../app.component.scss';
+
+$easy: $primary_color;
+$medium: #db7100;
+$hard: #db2644;
+
+.problems-list-wrapper {
+  margin: 24px auto 100px;
+  max-width: 800px;
+  font-family: $primary_font;
+
+  .problems-list-container {
+    background-color: #ffffff;
+
+    .problems-list {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+
+      .problems-item {
+        border-bottom: 1px solid $border_color;
+        outline: none;
+        cursor: pointer;
+
+        .link-wrapper {
+          text-decoration: none;
+        }
+
+        .problems-item-container {
+          padding: 30px;
+
+          .title {
+            color: $text_color_dark;
+            margin: 0 0 5px 0;
+            font-weight: 400;
+            font-size: 20px;
+          }
+
+          .difficulty {
+            color: $text_color_light;
+            font-size: 12px;
+            font-weight: 400;
+            margin: 0 0 5px 0;
+          }
+
+          .easy {
+            color: $easy;
+          }
+
+          .medium {
+            color: $medium;
+          }
+
+          .hard {
+            color: $hard;
+          }
+
+          .description {
+            color: $text_color_light;
+            font-size: 12px;
+            font-weight: 400;
+            margin: 0;
+          }
+
+          &:last-child {
+            border: none;
+          }
+
+          &:hover {
+            background-color: $primary_background_color;
+
+            .title {
+              color: $primary_color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
