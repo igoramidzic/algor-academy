@@ -7,6 +7,5 @@ export interface Problem {
   pseudo_code_solution: String;
   code_solution: String;
   difficulty: Number;
-  success_rate: Number;
   link: String;
 }

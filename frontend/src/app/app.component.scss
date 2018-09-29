@@ -30,6 +30,16 @@ sans-serif;
     justify-content: space-between;
   }
 
+  .bottom-space-between-content {
+    align-items: baseline;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
   .vertical-center-space-between-content {
     align-items: center;
     display: -ms-flexbox;
@@ -65,7 +75,33 @@ button {
   outline: none;
 }
 
+// Buttons
+.action-btn {
+  font-family: $primary_font;
+  padding: 0 24px;
+  line-height: 1;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.regular-action-btn {
+  box-shadow: 0 3px 10px 0 rgba(115, 143, 147, .3);
+  color: $text_color_dark;
+}
+
+.success-action-btn {
+  background-color: $primary_color;
+  box-shadow: 0 3px 6px 0 rgba(27, 169, 76, .4);
+  color: #ffffff;
+}
+
+// ..
+
 .slim-box-shadow {
+  background-color: #ffffff;
   box-shadow: 0.1px 1px 4px 0 #e7eeef;
 }
 
@@ -80,6 +116,42 @@ button {
 .max-page-width {
   max-width: 1240px;
   margin: auto;
+}
+
+.form-container {
+  font-family: $primary_font;
+
+  .regular-label {
+    color: $text_color_dark;
+    font-size: 15px;
+    margin-bottom: 4px;
+    display: inline-block;
+    font-weight: 700;
+  }
+
+  .regular-text-box {
+    border: 1px solid #C2C7D0;
+    border-radius: 5px;
+    padding: 10px 14px;
+    line-height: 1;
+    outline: none;
+    color: $text_color_dark;
+    font-size: 16px;
+    width: 100%;
+  }
+
+  .regular-textarea {
+    border: 1px solid #C2C7D0;
+    border-radius: 5px;
+    padding: 10px 14px;
+    line-height: 1;
+    outline: none;
+    color: $text_color_dark;
+    font-size: 14px;
+    width: 100%;
+    min-height: 200px;
+    max-height: 400px;
+  }
 }
 
 @media only screen and (min-width: 768px) {

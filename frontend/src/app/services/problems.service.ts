@@ -22,4 +22,13 @@ export class ProblemsService {
   getProblemById(id): Subscribable<any> {
     return this.http.get("http://localhost:3000/api/problems/" + id);
   }
+
+  updateProblemById(id, problem): Subscribable<any> {
+    let headers = new HttpHeaders({
+      "Content-Type": "application/json"
+    });
+    return this.http.put("http://localhost:3000/api/problems/" + id, problem, {
+      headers
+    });
+  }
 }

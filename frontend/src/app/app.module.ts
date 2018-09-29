@@ -12,6 +12,7 @@ import { ProblemsListComponent } from "./pages/main-problems-page/problems-list/
 import { IndividualProblemPageComponent } from "./pages/individual-problem-page/individual-problem-page.component";
 import { IndividualProblemComponent } from "./pages/individual-problem-page/individual-problem/individual-problem.component";
 import { EditProblemComponent } from "./pages/edit-problem/edit-problem.component";
+import { SubmitFormComponent } from './pages/edit-problem/submit-form/submit-form.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { EditProblemComponent } from "./pages/edit-problem/edit-problem.componen
     ProblemsListComponent,
     IndividualProblemPageComponent,
     IndividualProblemComponent,
-    EditProblemComponent
+    EditProblemComponent,
+    SubmitFormComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

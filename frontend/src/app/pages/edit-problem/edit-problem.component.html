@@ -1,15 +1,98 @@
-<app-page-header-nav [headerTitle]="problem?.title"></app-page-header-nav>
-<div class="edit-problem-wrapper max-page-width">
-  <div class="wrapper">
-    <div class="markdown-editor-container fat-box-shadow">
-      <textarea [(ngModel)]="text" (ngModelChange)="updateMarkdownPreview()" name="" id="" cols="30" rows="10" placeholder="..." class="markdown-textfield"></textarea>
-    </div>
-  </div>
+<app-page-header-nav [headerTitle]="problem?.title || 'Enter a title'"></app-page-header-nav>
 
-  <div class="wrapper">
-    <div id="markdown-preview" class="markdown-preview-container fat-box-shadow">
-      Preview ...
+<div class="max-page-width" *ngIf="problem">
+  <div class="everything-container">
+    <app-submit-form (onSaveProblem)="updateProblem()"></app-submit-form>
+
+    <div class="edit-problem-wrapper">
+      <div class="edit-problem-container fat-box-shadow" *ngIf="problem">
+        <form class="form-container">
+          <div class="form-group">
+            <label for="problem-title" class="regular-label">Title</label>
+            <input type="text" maxlength="50" [(ngModel)]="updatedProblem.title" name="problem-title" class="regular-text-box">
+          </div>
+
+          <div class="form-group">
+            <label for="description" class="regular-label">Description</label>
+            <input type="text" maxlength="125" [(ngModel)]="updatedProblem.description" name="description" class="regular-text-box">
+          </div>
+
+          <div class="form-group">
+            <label for="hackerrank-link" class="regular-label">HackerRank Link</label>
+            <input type="text" maxlength="300" [(ngModel)]="updatedProblem.link" name="hackerrank-link" class="regular-text-box">
+          </div>
+
+          <div class="word-solution-container">
+            <div class="grid-container grid-system-1">
+              <div class="form-group">
+                <div class="center-container">
+                  <div class="bottom-space-between-content">
+                    <label for="word-solution" class="regular-label">Word Solution</label>
+                    <label for="word-solution" class="meta-data-label">Markdown</label>
+                  </div>
+                </div>
+                <textarea [(ngModel)]="updatedProblem.word_solution" (ngModelChange)="updateWordSolution()" name="word-solution" class="regular-textarea"></textarea>
+              </div>
+
+              <div class="markdown-preview-container">
+                <div class="form-group">
+                  <label for="markdown-preview" class="regular-label">Markdown Preview</label>
+                  <div id="wordSolution" class="markdown-body markdown-preview-outlet" name="markdown-preview">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="word-solution-container pseudo-code-solution-container">
+            <div class="grid-container grid-system-1">
+              <div class="form-group">
+                <div class="center-container">
+                  <div class="bottom-space-between-content">
+                    <label for="pseudo-code-solution" class="regular-label">Pseudo Code Solution</label>
+                    <label for="pseudo-code-solution" class="meta-data-label">Markdown</label>
+                  </div>
+                </div>
+                <textarea [(ngModel)]="updatedProblem.pseudo_code_solution" (ngModelChange)="updatePseudoCodeSolution()" name="pseudo-code-solution" class="regular-textarea"></textarea>
+              </div>
+
+              <div class="markdown-preview-container">
+                <div class="form-group">
+                  <label for="markdown-preview" class="regular-label">Markdown Preview</label>
+                  <div id="pseudoCodeSolution" class="markdown-body markdown-preview-outlet" name="markdown-preview">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="word-solution-container code-solution-container">
+            <div class="grid-container grid-system-1">
+              <div class="form-group">
+                <div class="center-container">
+                  <div class="bottom-space-between-content">
+                    <label for="code-solution" class="regular-label">Code Solution</label>
+                    <label for="code-solution" class="meta-data-label">Markdown</label>
+                  </div>
+                </div>
+                <textarea [(ngModel)]="updatedProblem.code_solution" (ngModelChange)="updateCodeSolution()" name="code-solution" class="regular-textarea"></textarea>
+              </div>
+
+              <div class="markdown-preview-container">
+                <div class="form-group">
+                  <label for="markdown-preview" class="regular-label">Markdown Preview</label>
+                  <div id="codeSolution" class="markdown-body markdown-preview-outlet" name="markdown-preview">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
+
+    <app-submit-form (onSaveProblem)="updateProblem()"></app-submit-form>
+
   </div>
 
 </div>

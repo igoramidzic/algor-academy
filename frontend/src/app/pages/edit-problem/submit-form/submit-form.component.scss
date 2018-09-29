@@ -1,0 +1,17 @@
+@import '../../../app.component.scss';
+
+.submit-form-container {
+  padding: 0 15px;
+
+  .btn-group {
+    text-align: right;
+
+    .action-btn {
+      margin-right: 16px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
