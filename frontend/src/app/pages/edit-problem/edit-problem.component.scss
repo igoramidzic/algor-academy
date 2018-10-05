@@ -1,4 +1,8 @@
-@import '../../app.component.scss';
+@import "../../app.component.scss";
+
+$easy: $primary_color;
+$medium: #db7100;
+$hard: #db2644;
 
 .everything-container {
   margin-bottom: 100px;
@@ -6,6 +10,7 @@
 
 .edit-problem-wrapper {
   padding: 24px 0;
+  font-family: $primary_font;
 
   .edit-problem-container {
     padding: 30px;
@@ -13,7 +18,7 @@
   }
 
   .form-container {
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
 
     .form-group {
       margin-bottom: 16px;
@@ -27,6 +32,35 @@
     }
   }
 
+  .difficulty-container {
+    .option-btn {
+      border: none;
+      font-size: 15px;
+      padding: 8px 12px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $primary_background_color;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    .active-easy {
+      background-color: $easy !important;
+      color: #ffffff;
+    }
+    .active-medium {
+      background-color: $medium !important;
+      color: #ffffff;
+    }
+    .active-hard {
+      background-color: $hard !important;
+      color: #ffffff;
+    }
+  }
+
   .markdown-preview-container {
     box-sizing: border-box;
     min-width: 100%;
@@ -34,7 +68,7 @@
     margin: 0 auto;
 
     .markdown-preview-outlet {
-      border: 1px solid #C2C7D0;
+      border: 1px solid #c2c7d0;
       border-radius: 5px;
       padding: 15px;
       max-height: calc(100vh - 90px);
@@ -42,17 +76,13 @@
     }
   }
 
-
   .grid-container {
     display: grid;
     grid-column-gap: 12px;
   }
-
-
 }
 
 @media only screen and (min-width: 941px) {
-
   .everything-container {
     padding: 0 15px;
   }

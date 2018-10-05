@@ -1,11 +1,44 @@
 <div class="individual-problem-wrapper">
   <div class="individual-problem-container fat-box-shadow">
-    <div id="problem-markdown-container" class="problem-content">
-      <a [routerLink]="['edit']">Edit</a>
-    </div>
+    <div class="problem-content">
+      <div class="description-container">
+        <p class="description">{{ problem.description }}</p>
+      </div>
 
-    <div class="loading-problem-container" *ngIf="!problem">
-      Loading...
+      <div class="long-description-container">
+        <div id="longDescription" class="markdown-body" name="long-description">
+        </div>
+      </div>
+
+      <hr class="divider">
+
+      <div class="word-solution-container">
+        <label for="wordSolution" class="header">Word Solution</label>
+        <span *ngIf="!hidden1" class="blur-warning">Click solution to remove blur</span>
+        <div (click)="hidden1 = !hidden1" [ngClass]="{ 'hidden-text': !hidden1 }" id="wordSolution" class="markdown-body"
+          name="word-solution">
+        </div>
+      </div>
+
+      <hr class="divider">
+
+      <div class="pseudo-code-solution-container">
+        <label for="pseudoCodeSolution" class="header">Pseudo Code Solution</label>
+        <span *ngIf="!hidden2" class="blur-warning">Click solution to remove blur</span>
+        <div (click)="hidden2 = !hidden2" [ngClass]="{ 'hidden-text': !hidden2 }" id="pseudoCodeSolution" class="markdown-body"
+          name="pseudo-code-solution">
+        </div>
+      </div>
+
+      <hr class="divider">
+
+      <div class="code-solution-container">
+        <label for="codeSolution" class="header">Code Solution</label>
+        <span *ngIf="!hidden3" class="blur-warning">Click solution to remove blur</span>
+        <div (click)="hidden3 = !hidden3" [ngClass]="{ 'hidden-text': !hidden3 }" id="codeSolution" class="markdown-body"
+          name="code-solution">
+        </div>
+      </div>
     </div>
   </div>
 </div>

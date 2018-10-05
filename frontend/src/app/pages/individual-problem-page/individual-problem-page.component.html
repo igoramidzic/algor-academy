@@ -1,4 +1,6 @@
 <app-page-header-nav [headerTitle]="problem?.title"></app-page-header-nav>
 <div class="individual-problem-wrapper max-page-width">
-  <app-individual-problem [problem]="problem" *ngIf="problem"></app-individual-problem>
+  <div class="everything-container">
+    <app-individual-problem [problem]="problem" *ngIf="problem"></app-individual-problem>
+  </div>
 </div>
