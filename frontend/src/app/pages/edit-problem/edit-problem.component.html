@@ -1,0 +1,132 @@
+<app-page-header-nav [headerTitle]="problem?.title || 'Enter a title'"></app-page-header-nav>
+
+<div class="max-page-width" *ngIf="problem">
+  <div class="everything-container">
+    <app-submit-form (onSaveProblem)="updateProblem()"></app-submit-form>
+
+    <div class="edit-problem-wrapper">
+      <div class="edit-problem-container fat-box-shadow" *ngIf="problem">
+        <form class="form-container" [formGroup]="updateProblemForm">
+          <div class="form-group">
+            <label for="problem-title" class="regular-label">Title</label>
+            <input type="text" formControlName="title" maxlength="50" name="problem-title" class="regular-text-box">
+          </div>
+
+          <div class="form-group">
+            <label for="description" class="regular-label">Description</label>
+            <input type="text" formControlName="description" maxlength="125" name="description" class="regular-text-box">
+          </div>
+
+          <div class="form-group">
+            <label for="difficulty" class="regular-label">Difficulty</label>
+            <div class="difficulty-container">
+              <button (click)="updateProblemForm.controls['difficulty'].setValue(1)" [ngClass]="{ 'active-easy': updateProblemForm.controls['difficulty'].value == 1 }"
+                class="option-btn">Easy</button>
+              <button (click)="updateProblemForm.controls['difficulty'].setValue(2)" [ngClass]="{ 'active-medium': updateProblemForm.controls['difficulty'].value == 2 }"
+                class="option-btn">Medium</button>
+              <button (click)="updateProblemForm.controls['difficulty'].setValue(3)" [ngClass]="{ 'active-hard': updateProblemForm.controls['difficulty'].value == 3 }"
+                class="option-btn">Hard</button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="hackerrank-link" class="regular-label">HackerRank Link</label>
+            <input type="text" formControlName="link" maxlength="300" name="hackerrank-link" class="regular-text-box">
+          </div>
+
+          <div class="long-description-container">
+            <div class="grid-container grid-system-1">
+              <div class="form-group">
+                <div class="center-container">
+                  <div class="bottom-space-between-content">
+                    <label for="long-description" class="regular-label">Long Description</label>
+                    <label for="long-description" class="meta-data-label">Markdown</label>
+                  </div>
+                </div>
+                <textarea formControlName="long_description" name="long-description" class="regular-textarea"></textarea>
+              </div>
+
+              <div class="markdown-preview-container">
+                <div class="form-group">
+                  <label for="markdown-preview" class="regular-label">Markdown Preview</label>
+                  <div id="longDescription" class="markdown-body markdown-preview-outlet" name="markdown-preview">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="word-solution-container">
+            <div class="grid-container grid-system-1">
+              <div class="form-group">
+                <div class="center-container">
+                  <div class="bottom-space-between-content">
+                    <label for="word-solution" class="regular-label">Word Solution</label>
+                    <label for="word-solution" class="meta-data-label">Markdown</label>
+                  </div>
+                </div>
+                <textarea formControlName="word_solution" name="word-solution" class="regular-textarea"></textarea>
+              </div>
+
+              <div class="markdown-preview-container">
+                <div class="form-group">
+                  <label for="markdown-preview" class="regular-label">Markdown Preview</label>
+                  <div id="wordSolution" class="markdown-body markdown-preview-outlet" name="markdown-preview">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pseudo-code-solution-container">
+            <div class="grid-container grid-system-1">
+              <div class="form-group">
+                <div class="center-container">
+                  <div class="bottom-space-between-content">
+                    <label for="pseudo-code-solution" class="regular-label">Pseudo Code Solution</label>
+                    <label for="pseudo-code-solution" class="meta-data-label">Markdown</label>
+                  </div>
+                </div>
+                <textarea formControlName="pseudo_code_solution" name="pseudo-code-solution" class="regular-textarea"></textarea>
+              </div>
+
+              <div class="markdown-preview-container">
+                <div class="form-group">
+                  <label for="markdown-preview" class="regular-label">Markdown Preview</label>
+                  <div id="pseudoCodeSolution" class="markdown-body markdown-preview-outlet" name="markdown-preview">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="code-solution-container">
+            <div class="grid-container grid-system-1">
+              <div class="form-group">
+                <div class="center-container">
+                  <div class="bottom-space-between-content">
+                    <label for="code-solution" class="regular-label">Code Solution</label>
+                    <label for="code-solution" class="meta-data-label">Markdown</label>
+                  </div>
+                </div>
+                <textarea formControlName="code_solution" name="code-solution" class="regular-textarea"></textarea>
+              </div>
+
+              <div class="markdown-preview-container">
+                <div class="form-group">
+                  <label for="markdown-preview" class="regular-label">Markdown Preview</label>
+                  <div id="codeSolution" class="markdown-body markdown-preview-outlet" name="markdown-preview">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <app-submit-form (onSaveProblem)="updateProblem()"></app-submit-form>
+
+  </div>
+
+</div>

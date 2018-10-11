@@ -13,6 +13,11 @@ const problemModel = new Schema({
     required: true,
     description: "Must be a string and is required"
   },
+  long_description: {
+    type: String,
+    required: true,
+    description: "Must be a string and is required"
+  },
   date_published: {
     type: Date,
     required: false
@@ -41,7 +46,11 @@ const problemModel = new Schema({
     type: String,
     required: true,
     description: "Must be a string and is required"
+  },
+  script_link: {
+    type: String,
+    required: false
   }
-})
+});
 
-module.exports = mongoose.model('problems', problemModel);
+module.exports = mongoose.model("problems", problemModel);

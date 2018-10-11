@@ -9,7 +9,6 @@ import { ActivatedRoute } from "@angular/router";
   styleUrls: ["./individual-problem-page.component.scss"]
 })
 export class IndividualProblemPageComponent implements OnInit {
-  headerTitle: String;
   problem: Problem;
 
   constructor(
@@ -18,14 +17,12 @@ export class IndividualProblemPageComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    //
     this.route.params
       .subscribe(params => {
         this.problemsService
           .getProblemById(params.id)
           .subscribe((problem: Problem) => {
             this.problem = problem;
-            this.headerTitle = this.problem.title;
           });
       })
       .unsubscribe();
