@@ -9,4 +9,5 @@ export interface Problem {
   code_solution: String;
   difficulty: Number;
   link: String;
+  script_link: String;
 }

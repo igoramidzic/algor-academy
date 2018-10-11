@@ -21,7 +21,6 @@
 .individual-problem-wrapper {
   .individual-problem-container {
     background-color: #ffffff;
-    padding: 30px;
     font-family: $primary_font;
 
     .problem-content {
@@ -36,7 +35,6 @@
       .header {
         font-weight: 600;
         margin-bottom: 24px;
-        font-size: 18px;
         display: inline-block;
         padding-bottom: 4px;
         border-bottom: 1px solid $border_color;
@@ -56,6 +54,25 @@
           margin: 0;
         }
       }
+    }
+  }
+}
+
+@media only screen and (min-width: 781px) {
+  .individual-problem-container {
+    padding: 30px;
+
+    .header {
+      font-size: 18px;
+    }
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .individual-problem-container {
+    padding: 30px 15px;
+    .header {
+      font-size: 16px;
     }
   }
 }

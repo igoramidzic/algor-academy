@@ -15,7 +15,7 @@
       <div class="word-solution-container">
         <label for="wordSolution" class="header">Word Solution</label>
         <span *ngIf="!hidden1" class="blur-warning">Click solution to remove blur</span>
-        <div (click)="hidden1 = !hidden1" [ngClass]="{ 'hidden-text': !hidden1 }" id="wordSolution" class="markdown-body"
+        <div (click)="hidden1 = true" [ngClass]="{ 'hidden-text': !hidden1 }" id="wordSolution" class="markdown-body"
           name="word-solution">
         </div>
       </div>
@@ -25,7 +25,7 @@
       <div class="pseudo-code-solution-container">
         <label for="pseudoCodeSolution" class="header">Pseudo Code Solution</label>
         <span *ngIf="!hidden2" class="blur-warning">Click solution to remove blur</span>
-        <div (click)="hidden2 = !hidden2" [ngClass]="{ 'hidden-text': !hidden2 }" id="pseudoCodeSolution" class="markdown-body"
+        <div (click)="hidden2 = true" [ngClass]="{ 'hidden-text': !hidden2 }" id="pseudoCodeSolution" class="markdown-body"
           name="pseudo-code-solution">
         </div>
       </div>
@@ -35,10 +35,18 @@
       <div class="code-solution-container">
         <label for="codeSolution" class="header">Code Solution</label>
         <span *ngIf="!hidden3" class="blur-warning">Click solution to remove blur</span>
-        <div (click)="hidden3 = !hidden3" [ngClass]="{ 'hidden-text': !hidden3 }" id="codeSolution" class="markdown-body"
+        <div (click)="hidden3 = true" [ngClass]="{ 'hidden-text': !hidden3 }" id="codeSolution" class="markdown-body"
           name="code-solution">
         </div>
       </div>
+
+      <hr class="divider">
+
+      <div class="p5-container">
+        <label for="codeSolution" class="header">Animated algorithm</label>
+        <app-p5sketch *ngIf="problem" [problem]="problem"></app-p5sketch>
+      </div>
+
     </div>
   </div>
 </div>
