@@ -22,6 +22,8 @@ export class IndividualProblemComponent implements OnInit {
     this.convertMarkdown();
   }
 
+  // ..
+
   convertMarkdown() {
     var longDescriptionTarget = document.getElementById("longDescription");
     var wordSolutionTarget = document.getElementById("wordSolution");
