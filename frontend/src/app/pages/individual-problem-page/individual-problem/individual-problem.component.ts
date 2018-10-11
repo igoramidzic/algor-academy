@@ -2,6 +2,8 @@ import { Component, OnInit, Input } from "@angular/core";
 import { Problem } from "../../../models/problem";
 import * as showdown from "showdown";
 
+declare var variableName: any;
+
 @Component({
   selector: "app-individual-problem",
   templateUrl: "./individual-problem.component.html",

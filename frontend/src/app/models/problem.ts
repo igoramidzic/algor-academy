@@ -8,5 +8,6 @@ export interface Problem {
   pseudo_code_solution: String;
   code_solution: String;
   difficulty: Number;
-  link: String;
+  link: String;,
+  script_link: String;
 }
