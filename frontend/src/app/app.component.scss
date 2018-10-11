@@ -1,17 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700');
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700");
 
 $primary_color: #1ba94c;
 $dark_background_color: #39424e;
 $primary_background_color: #f3f7f7;
 $text_color_light: #576871;
 $text_color_dark: #0e141e;
-$success_color: #25C646;
+$success_color: #25c646;
 $danger_color: #ea0027;
-$pending_color: #EFE934;
+$pending_color: #efe934;
 $border_color: #e7eeef;
 
-$primary_font: 'Nunito Sans',
-sans-serif;
+$primary_font: "Nunito Sans", sans-serif;
 
 .center-container {
   display: -ms-flexbox;
@@ -88,13 +87,13 @@ button {
 }
 
 .regular-action-btn {
-  box-shadow: 0 3px 10px 0 rgba(115, 143, 147, .3);
+  box-shadow: 0 3px 10px 0 rgba(115, 143, 147, 0.3);
   color: $text_color_dark;
 }
 
 .success-action-btn {
   background-color: $primary_color;
-  box-shadow: 0 3px 6px 0 rgba(27, 169, 76, .4);
+  box-shadow: 0 3px 6px 0 rgba(27, 169, 76, 0.4);
   color: #ffffff;
 }
 
@@ -130,7 +129,7 @@ button {
   }
 
   .regular-text-box {
-    border: 1px solid #C2C7D0;
+    border: 1px solid #c2c7d0;
     border-radius: 5px;
     padding: 10px 14px;
     line-height: 1;
@@ -141,7 +140,7 @@ button {
   }
 
   .regular-textarea {
-    border: 1px solid #C2C7D0;
+    border: 1px solid #c2c7d0;
     border-radius: 5px;
     padding: 10px 14px;
     line-height: 1;
@@ -156,12 +155,12 @@ button {
 
 @media only screen and (min-width: 768px) {
   .hidden-desktop {
-    display: none !important
+    display: none !important;
   }
 }
 
 @media only screen and (max-width: 767px) {
   .hidden-mobile {
-    display: none !important
+    display: none !important;
   }
 }

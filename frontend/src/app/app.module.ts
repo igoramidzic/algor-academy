@@ -14,6 +14,7 @@ import { IndividualProblemPageComponent } from "./pages/individual-problem-page/
 import { IndividualProblemComponent } from "./pages/individual-problem-page/individual-problem/individual-problem.component";
 import { EditProblemComponent } from "./pages/edit-problem/edit-problem.component";
 import { SubmitFormComponent } from "./pages/edit-problem/submit-form/submit-form.component";
+import { P5sketchComponent } from './components/p5sketch/p5sketch.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { SubmitFormComponent } from "./pages/edit-problem/submit-form/submit-for
     IndividualProblemPageComponent,
     IndividualProblemComponent,
     EditProblemComponent,
-    SubmitFormComponent
+    SubmitFormComponent,
+    P5sketchComponent
   ],
   imports: [
     BrowserModule,

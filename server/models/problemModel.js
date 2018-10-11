@@ -46,6 +46,10 @@ const problemModel = new Schema({
     type: String,
     required: true,
     description: "Must be a string and is required"
+  },
+  script_link: {
+    type: String,
+    required: false
   }
 });
 

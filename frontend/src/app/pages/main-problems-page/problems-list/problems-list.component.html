@@ -7,7 +7,7 @@
             <div class="center-space-between-content">
               <div class="problems-item-container">
                 <h3 class="title">{{ problem.title }}</h3>
-                <p class="difficulty easy" *ngIf="problem.difficulty === 1">Easy</p>
+                <p class="difficulty easy" *ngIf="problem.difficulty == 1">Easy</p>
                 <p class="difficulty medium" *ngIf="problem.difficulty == 2">Medium</p>
                 <p class="difficulty hard" *ngIf="problem.difficulty == 3">Hard</p>
                 <p class="description">{{ problem.description }}</p>
