@@ -4,32 +4,31 @@ var Problem = require("../models/problemModel");
 const problemRouter = express.Router();
 
 problemRouter
-  .get('/', (req, res) => {
+  .get("/", (req, res) => {
     Problem.find({}, (err, problems) => {
-      res.json(problems)
-    })
+      res.json(problems);
+    });
   })
-  .get('/:id', (req, res) => {
+  .get("/:id", (req, res) => {
     var id = req.params.id;
     Problem.findById(id, (err, problem) => {
       res.json(problem);
-    })
+    });
   })
-  .post('/', (req, res) => {
+  .post("/", (req, res) => {
     let problem = new Problem(req.body);
     problem.save();
-    res.status(201).send(problem)
+    res.status(201).send(problem);
   })
-  .put('/:id', (req, res) => {
+  .put("/:id", (req, res) => {
     var id = req.params.id;
     Problem.findByIdAndUpdate(id, req.body, {
-        new: true
-      })
-      .then((result) => {
-        res.json(result);
-      })
+      new: true
+    }).then(result => {
+      res.json(result);
+    });
   })
-  .delete('/:id', (req, res) => {
+  .delete("/:id", (req, res) => {
     var id = req.params.id;
     Problem.findByIdAndDelete(id)
       .then(result => {
@@ -37,7 +36,7 @@ problemRouter
       })
       .catch(error => {
         res.json(error);
-      })
-  })
+      });
+  });
 
 module.exports = problemRouter;

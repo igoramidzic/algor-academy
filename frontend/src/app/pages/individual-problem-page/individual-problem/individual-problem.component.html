@@ -39,14 +39,17 @@
           name="code-solution">
         </div>
       </div>
-
-      <hr class="divider">
-
-      <div class="p5-container">
-        <label for="codeSolution" class="header">Animated algorithm</label>
-        <app-p5sketch *ngIf="problem" [problem]="problem"></app-p5sketch>
-      </div>
-
     </div>
   </div>
+
+  <div [ngClass]="{ 'clickable': !showAnimation }" class="animation-container fat-box-shadow" (click)="showAnimation = true">
+    <div class="show-animation-notif-container" *ngIf="!showAnimation">
+      <h3 class="header">Click to show animation</h3>
+    </div>
+    <div class="p5-container">
+      <app-p5sketch *ngIf="showAnimation" [problem]="problem"></app-p5sketch>
+    </div>
+  </div>
+
+
 </div>
