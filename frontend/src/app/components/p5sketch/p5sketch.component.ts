@@ -12,13 +12,31 @@ export class P5sketchComponent implements OnInit {
   @Input("problem")
   problem: Problem;
   loadAPI: Promise<any>;
+  loading: boolean = true;
 
   constructor() {}
 
   ngOnInit() {
     this.loadAPI = new Promise(resolve => {
-      this.loadScript(this.problem.script_link);
-      resolve(true);
+      this.loadScript(<string>this.problem.script_link);
+      var scripts = document.getElementsByTagName("script");
+      var isFound = false;
+      while (!isFound) {
+        for (var i = 0; i < scripts.length; ++i) {
+          if (
+            scripts[i].getAttribute("src") != null &&
+            scripts[i]
+              .getAttribute("src")
+              .includes(<string>this.problem.script_link)
+          ) {
+            isFound = true;
+            resolve(true);
+            break;
+          }
+        }
+      }
+    }).then(() => {
+      this.loading = false;
     });
   }
 

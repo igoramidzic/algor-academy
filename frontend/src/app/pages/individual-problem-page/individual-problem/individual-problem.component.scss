@@ -19,9 +19,31 @@
 }
 
 .individual-problem-wrapper {
-  .individual-problem-container {
+  .clickable {
+    cursor: pointer;
+    transition: 0.25s;
+
+    &:hover {
+      background-color: #f7f7f7;
+    }
+  }
+
+  .individual-problem-container,
+  .animation-container {
     background-color: #ffffff;
     font-family: $primary_font;
+    margin-bottom: 40px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .show-animation-notif-container {
+      .header {
+        font-size: 18px;
+        color: $text_color_light;
+        text-align: center;
+      }
+    }
 
     .problem-content {
       font-size: 14px;
@@ -59,7 +81,8 @@
 }
 
 @media only screen and (min-width: 781px) {
-  .individual-problem-container {
+  .individual-problem-container,
+  .animation-container {
     padding: 30px;
 
     .header {
@@ -69,7 +92,8 @@
 }
 
 @media only screen and (max-width: 780px) {
-  .individual-problem-container {
+  .individual-problem-container,
+  .animation-container {
     padding: 30px 15px;
     .header {
       font-size: 16px;
