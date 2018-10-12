@@ -31,12 +31,12 @@ app.use(function(req, res, next) {
   next();
 });
 
-// Routes
-app.use("/api/problems", problemRouter);
-
 app.get("/", (req, res) => {
   res.send("This is an api. Access through /api");
 });
+
+// Routes
+app.use("/api/problems", problemRouter);
 
 var server = app.listen(port, () => {
   console.log("app running on port ", server.address().port);
