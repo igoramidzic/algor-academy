@@ -2,9 +2,9 @@
   "name": "algor-academy",
   "version": "1.0.0",
   "description": "A teaching tool for algorithms and data structures",
-  "main": "server/app.js",
+  "main": "frontend/server/app.js",
   "scripts": {
-    "start": "node server/app.js"
+    "start": "node frontend/server/app.js"
   },
   "engines": {
     "node": "8.11.1"
