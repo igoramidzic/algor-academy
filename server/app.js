@@ -35,9 +35,9 @@ app.use(function(req, res, next) {
 // Routes
 app.use("/api/problems", problemRouter);
 
-app.use(express.static(__dirname + "/app/dist/algor-academy"));
+app.use(express.static("../dist/algor-academy"));
 app.get("/*", function(req, res) {
-  res.sendFile("/app/dist/algor-academy/index.html");
+  res.sendFile("../dist/algor-academy/index.html");
 });
 
 var server = app.listen(port, () => {
