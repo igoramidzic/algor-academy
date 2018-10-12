@@ -6,27 +6,33 @@ var mongoose = require("mongoose");
 
 const port = process.env.PORT || 3000;
 
-const db = mongoose.connect('mongodb://localhost:27017/algor-academy', {
-  useNewUrlParser: true
-});
+const db = mongoose.connect(
+  process.env.MONGODB_URI || "mongodb://localhost:27017/algor-academy",
+  {
+    useNewUrlParser: true
+  }
+);
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({
-  extended: true
-}));
+app.use(
+  bodyParser.urlencoded({
+    extended: true
+  })
+);
 
 // CORS
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "http://localhost:4200");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
   res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
   next();
 });
 
 // Routes
-app.use('/api/problems', problemRouter);
-
-
+app.use("/api/problems", problemRouter);
 
 var server = app.listen(port, () => {
   console.log("app running on port ", server.address().port);
