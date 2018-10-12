@@ -12,6 +12,10 @@ declare var variableName: any;
 export class IndividualProblemComponent implements OnInit {
   @Input("problem")
   problem: Problem;
+  showAnimation: boolean;
+  hidden1: boolean;
+  hidden2: boolean;
+  hidden3: boolean;
 
   converter = new showdown.Converter({
     ghCompatibleHeaderId: true,

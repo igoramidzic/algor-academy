@@ -3,6 +3,7 @@ var bodyParser = require("body-parser");
 var app = express();
 var problemRouter = require("./routes/problemRouter");
 var mongoose = require("mongoose");
+var path = require("path");
 
 const port = process.env.PORT || 3000;
 
@@ -31,12 +32,13 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.get("/", (req, res) => {
-  res.send("This is an api. Access through /api");
-});
-
 // Routes
 app.use("/api/problems", problemRouter);
+
+app.use(express.static(__dirname + "/dist/algor-academy"));
+app.get("/*", function(req, res) {
+  res.sendFile(path.join(__dirname + "/dist/algor-academy/index.html"));
+});
 
 var server = app.listen(port, () => {
   console.log("app running on port ", server.address().port);
