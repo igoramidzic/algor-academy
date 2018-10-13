@@ -39,7 +39,7 @@ app.use(express.static(__dirname + "public"));
 app.get("/*", function(req, res) {
   console.log(__dirname);
 
-  res.sendFile(path(__dirname + "public/index.html"));
+  res.sendFile(path.join(__dirname + "public/index.html"));
 });
 
 var server = app.listen(port, () => {
