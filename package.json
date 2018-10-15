@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "node server/app.js",
-    "build": "ng build"
+    "build": "ng build",
+    "postinstall": "ng build --aot --prod"
   },
   "engines": {
     "node": "8.11.1"
