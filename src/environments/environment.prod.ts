@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  api_url_base: "http://localhost:3000"
+  api_url_base: "https://algor-academy.herokuapp.com"
 };

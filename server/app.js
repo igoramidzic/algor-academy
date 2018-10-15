@@ -4,11 +4,12 @@ var app = express();
 var problemRouter = require("./routes/problemRouter");
 var mongoose = require("mongoose");
 var path = require("path");
+require("dotenv").config();
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT;
 
 const db = mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost:27017/algor-academy",
+  process.env.MONGODB_URI,
   {
     useNewUrlParser: true
   }
@@ -23,7 +24,7 @@ app.use(
 
 // CORS
 app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "http://localhost:4200");
+  res.header("Access-Control-Allow-Origin", process.env.BASE_URL);
   res.header(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"
@@ -37,8 +38,6 @@ app.use("/api/problems", problemRouter);
 
 app.use(express.static(__dirname + "/dist"));
 app.get("/*", function(req, res) {
-  console.log(__dirname);
-
   res.sendFile(path.join(__dirname + "/dist/index.html"));
 });
 
