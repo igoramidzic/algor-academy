@@ -35,7 +35,7 @@ app.use(function(req, res, next) {
 // Routes
 app.use("/api/problems", problemRouter);
 
-app.use(express.static(__dirname + "dist"));
+app.use(express.static(__dirname + "server/dist"));
 app.get("/*", function(req, res) {
   console.log(__dirname);
 
